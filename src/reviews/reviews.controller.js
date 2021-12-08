@@ -14,7 +14,6 @@ async function reviewExists(req, res, next) {
 
 
 async function update(req, res) {
-  // your solution here
   const updatedreview = {
     ...res.locals.review,
     ...req.body.data,
@@ -27,7 +26,6 @@ async function update(req, res) {
 }
 
 async function destroy(req, res) {
-  // your solution here
   await service.delete(res.locals.review.review_id);
   res.sendStatus(204);
 }

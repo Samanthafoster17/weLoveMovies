@@ -6,7 +6,6 @@ function read(reviewId) {
 }
 
 function update(updatedreview) {
-  //your solution here
    return knex('reviews')
     .where({ review_id: updatedreview.review_id })
     .update(updatedreview, "*")
@@ -19,7 +18,6 @@ function update(updatedreview) {
 }
 
 function destroy(reviewId) {
-  //your solution here
    return knex("reviews").where({ review_id: reviewId }).del();
 }
 
