@@ -10,7 +10,7 @@ function isShowing() {
   .join("movies as m", "m.movie_id", "mt.movie_id" )
   .select("*")
   .where("is_showing", true)
-  .groupBy("mt.movie_id");
+  .orderBy("m.movie_id");
 }
 
 function read(movie_id) {
