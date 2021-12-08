@@ -8,7 +8,7 @@ function list() {
 function isShowing() {
   return knex("movies_theaters as mt")
   .join("movies as m", "m.movie_id", "mt.movie_id" )
-  .select("*")
+  .distinct("m.*")
   .where("is_showing", true)
   .orderBy("m.movie_id");
 }
